@@ -1,3 +1,4 @@
+//若存在小的数字在大的数字的左边的情况，根据规则需要减去小的数字
 class Solution {
     Map<Character, Integer> symbolValues = new HashMap<Character, Integer>() {{
         put('I', 1);
