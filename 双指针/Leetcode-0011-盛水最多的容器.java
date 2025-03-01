@@ -1,3 +1,4 @@
+//左指针为左侧模板，右指针为右侧模板，area记录可能成为答案的区域，左右指针向中间靠近时，只有height大于当前边界才有可能成为答案
 class Solution {
     public int maxArea(int[] height) {
         int left = 0;
