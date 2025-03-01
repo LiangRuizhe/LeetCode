@@ -1,3 +1,4 @@
+//互为字母异位词的两个字符串包含的字母相同,将字符串数组排序后放入HashMap中
 class Solution {
     public List<List<String>> groupAnagrams(String[] strs) {
         Map<String,List<String>> map = new HashMap<String,List<String>>();
