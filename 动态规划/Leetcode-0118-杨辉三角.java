@@ -1,3 +1,5 @@
+//状态转移方程：f[i][j] = f[i-1][j-1]+f[i-1][j]
+//边界条件：首项和末项都为1
 class Solution {
     public List<List<Integer>> generate(int numRows) {
        List<List<Integer>> c = new ArrayList<>(numRows);
