@@ -1,3 +1,7 @@
+//dp[i][j] 表示从数组的 [0,i] 下标范围内选取若干个正整数（可以是 0 个），是否存在一种选取方案使得被选取的正整数的和等于 j
+//如果j>=num[i],即当前物品可以被选取，则状态转移方程为: dp[i][j]=dp[i-1][j]|dp[i-1][j-num];
+//如果j<num[i]，即当前物品不可以被选取，则状态转移方程为: dp[i][j]=dp[i-1][j];
+//边界条件: dp[i][0]=true; 对于任意下标范围内选取若干个整数，一定存在一种方案使得其和为0(全部都不选取)
 class Solution {
     public boolean canPartition(int[] nums) {
         int n = nums.length;
