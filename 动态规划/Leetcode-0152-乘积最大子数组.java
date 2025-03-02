@@ -1,3 +1,6 @@
+//由于nums存在正负，所以乘积最大值可能由前面数组的最大值乘上nums[i](nums[i]>0)或者前面乘积的最小值乘上nums[i](nums[i]<0)得到
+//状态转移方程：nums[i]>0 maxF[i]= maxF[i-1]*nums[i]; minF[i]  = minF[i-1]*nums[i],nums<0,则讨论情况相反
+//边界条件,maxF[0] = minF[0]=nums[0]
 class Solution {
     public int maxProduct(int[] nums) {
         int length = nums.length;
