@@ -1,3 +1,5 @@
+//二维数组动态规划：状态转移方程：f(i,j)=f(i−1,j)+f(i,j−1)
+//边界条件:f(0,j) = f(i,0) = 1
 class Solution {
     public int uniquePaths(int m, int n) {
         int[] f = new int [n];
