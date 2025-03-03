@@ -1,3 +1,4 @@
+//对于一个长度为 N 的数组，其中没有出现的最小正整数只能在 [1,N+1] 中
 class Solution {
     public int firstMissingPositive(int[] nums) {
         int n = nums.length;
