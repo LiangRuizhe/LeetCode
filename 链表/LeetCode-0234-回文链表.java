@@ -31,7 +31,7 @@ class Solution2{
         }
         ListNode temp2 = reverse(node1);
         ListNode temp = head;
-        while(temp!=null && temp2!=null)
+        while(temp!=null && temp2!=null)///比较循环遍历条件
          {
             if(temp.val!=temp2.val)
              return false;
