@@ -1,4 +1,5 @@
-class Solution {
+//递归调用
+class Solution1 {
     private ListNode frontPointer;
     public boolean recursivelyCheck(ListNode currentNode){
         if(currentNode !=null){
