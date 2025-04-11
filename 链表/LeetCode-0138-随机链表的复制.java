@@ -1,3 +1,4 @@
+//在每个结点后，复制一个结点，复制随机结点，拆分链表
 class Solution {
     public Node copyRandomList(Node head) {
         if(head==null)
