@@ -2,24 +2,23 @@
 //然后循环查找是否包含nums[i]+1，记录最长序列的长度
 class Solution {
     public int longestConsecutive(int[] nums) {
-        Set<Integer> num_set = new HashSet<Integer>();
-        for(int num : nums){
-            num_set.add(num);
+        Set<Integer> ans = new HashSet<>();
+        for(int i=0;i<nums.length;i++){
+            ans.add(nums[i]);
         }
-        int ans = 0;
-        for(int num : num_set){
-            if(!num_set.contains(num-1)){
-                int currentNum = num;
-                int temp = 1;
-
-                while(num_set.contains(currentNum+1)){
-                currentNum+=1;
-                temp+=1;
-
-            }
-             ans = Math.max(ans,temp);
-            }         
+        int len = 0;
+        for(int num : ans){ //注意第二次遍历要用去重的set数组，而不是使用原有数组nums否则会超时
+            if(!ans.contains(num-1))
+              {
+                int cur = num;
+                int curlen =1;
+                while(ans.contains(cur+1)){
+                    curlen++;
+                    cur++;
+                } 
+               len = Math.max(curlen,len);
+              }
         }
-        return ans;
+        return len;
     }
 }
